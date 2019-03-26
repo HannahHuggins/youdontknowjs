@@ -139,3 +139,92 @@ comment
 
 // Variables
 
+var amount = 99;
+
+amount = amount * 2;
+
+console.log(amount);
+
+amount = "£" + String(amount);
+
+console.log(amount);
+
+// state is tracking the changes to values as your program runs 
+
+var TAX_RATE = 0.08;
+var amount = 99;
+amount = amount * 2;
+amount = amount + (amount * TAX_RATE);
+console.log(amount);
+console.log(amount.toFixed(2));
+
+/*toFixed is a function that can be accessed on number values. It will return the number
+as a string to the next 2 decimal places (specified in the brackets).*/
+//------------------------------------------------------------------------------------------------//
+
+// Constant variables
+
+const TAX_RATE = 0.09;
+
+/* constants are variables with unchanged values, and defining them prevents you from accidentally changing a value of a variable
+that needs to stay the same. */
+
+//------------------------------------------------------------------------------------------------//
+
+// Blocks
+
+// A block is defined by wrapping a section of code in curly brackets {..}
+
+var amount = 99;
+{
+    amount = amount * 2;
+    console.log(amount);
+}
+
+// Typically blocks are attached to some sort of control statement, like an if statement or a loop 
+var amount = 99;
+
+if (amount > 10){
+    amount = amount * 2;
+    console.log(amount);
+}
+
+//------------------------------------------------------------------------------------------------//
+
+// Conditionals 
+
+var bank_balance = 300;
+var amount = 90;
+
+if (amount < bank_balance){
+    console.log("yes i will buy that thing lol");
+}
+
+// if the conditional is true it will log the string. 
+
+// you can even provide an alternative if the condition isn't met 
+
+// else
+
+const ACCESSORY_PRICE = 9.99;
+var bank_balance = 302.13;
+var amount = 99.99;
+
+amount = amount * 2; 
+
+if ( amount < bank_balance){
+    console.log("i'll take the accessory!");
+    amount = amount + ACCESSORY_PRICE;
+}
+else{
+    console.log("no thanks!");
+}
+
+/* if the condition is true it will print "i'll take the accessory" and add it to the amount. 
+else, it will print "no thanks!"
+
+The if statement expects a boolean, but if you pass it a different type coercion occurs.
+*/
+
+//------------------------------------------------------------------------------------------------//
+
