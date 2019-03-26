@@ -268,3 +268,35 @@ while ( i < 10){
 //------------------------------------------------------------------------------------------------//
 
 // Break statement - can use this to stop a loop 
+
+var i = 0;
+
+while(true){
+    if (i <= 9);
+    console.log(i);
+    i = i + 1;
+}
+else {
+    break;
+}
+// otherwise this loop would run forever 
+
+//------------------------------------------------------------------------------------------------//
+
+// For loops 
+
+// For loops are similar to while or do while, but are written in a way that's easier to understand.
+
+for (var i = 0; i <= 9; i = i +1){
+    console.log(i);
+}
+
+/* the for loop has three clauses.
+
+- The intialization clause: var i = 0;
+- The conditional test clause: i <= 9;
+- And the update clause: i = i + 1;
+*/
+
+//------------------------------------------------------------------------------------------------//
+
