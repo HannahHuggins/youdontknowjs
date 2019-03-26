@@ -124,3 +124,18 @@ console.log(b); // 42
 
 //------------------------------------------------------------------------------------------------//
 
+// Code comments
+
+// Single line comment
+
+/* Multi
+line
+comment
+*/
+
+// Too many comments (one per line of code) is prob a sign of poorly written code 
+
+//------------------------------------------------------------------------------------------------//
+
+// Variables
+
