@@ -88,3 +88,39 @@ a = a * 2;
 */
 //------------------------------------------------------------------------------------------------//
 
+// Values and types 
+
+/* Literals = values inclued directly in the source code 
+String literals = ("") or ('')
+Number literals = 1 etc
+Boolean literals = true or false
+*/
+
+"i am a string";
+'i am also a string';
+
+42;
+
+true;
+false;
+
+//------------------------------------------------------------------------------------------------//
+
+// Converting between types (coersion)
+
+// Coercion = converting a number to a string. 
+// implicit coercion = comparing two values that are not already of the same type 
+
+var a = "42";
+
+var b = Number(a);
+
+console.log(a); // "42"
+console.log(b); // 42
+
+//Using number, a built in function, is an explicit coercion from any other type to the number type. 
+
+"99" == 99; //js will convert the left hand side to it's number equivalent, which is true.
+
+//------------------------------------------------------------------------------------------------//
+
