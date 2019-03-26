@@ -228,3 +228,43 @@ The if statement expects a boolean, but if you pass it a different type coercion
 
 //------------------------------------------------------------------------------------------------//
 
+// Loops - repeating a set of actions until a certain condition fails 
+
+// A loop includes the test condition as well as a block ({..}), each time the loop block executes, that's called an iteration. 
+
+white (numOfCustomers > 0) {
+    console.log("how can i help?");
+
+    //help the customer...
+
+    numOfCustomers = numOfCustomers - 1;
+}
+
+// while loops repeat a block of statements until a condition no longer evaluates to be true. 
+
+do {
+    console.log("how can i help?");
+
+    //help the customer...
+    numOfCustomers = numOfCustomers - 1;
+} while (numOfCustomers > 0);
+
+/* The only difference is whether the conditional is tested before the first iteration (while),
+or after the first iteration (do while).
+A do while loop will run at least once even if the condition is false, because it checks the 
+condition after the fact, whereas the while loop won't run at all if the condition is false because
+it checks the condition first. 
+*/
+
+i = 0;
+
+while ( i < 10){
+    console.log(i);
+    i = i + 1;
+}
+
+// This will loop through numbers until i = 10 
+
+//------------------------------------------------------------------------------------------------//
+
+// Break statement - can use this to stop a loop 
