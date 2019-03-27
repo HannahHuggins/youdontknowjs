@@ -351,3 +351,75 @@ var amount = 99.99;
 amount = calculateFinalPurchaseAmount(amount);
 
 console.log(amount.toFixed(2)); 
+/* The function is only called once but putting this info into a separate function
+makes the code that uses the logic a lot cleaner and saves repeating. 
+*/
+
+//------------------------------------------------------------------------------------------------//
+
+// Scope
+
+/* Scope is a collection of variables as well as the rules for how the variables are accessed by name
+*/ Only code inside that function can access the function's scoped variables.
+
+function one(){
+    var a = 1;
+    console.log(a);
+}
+
+function two(){
+    var a = 2;
+    console.log(a);
+}
+
+one();
+two();
+
+/* A variable name has to be unique within that specific block of code (the same scope)
+But the same variable name can be used in different scopes(code blocks). */
+
+function outer(){
+    var a = 1;
+
+    function inner(){
+        var b = 2;
+
+        //we can access both 'a' and 'b' here. 
+        console.log(a+b);
+    }
+
+    inner();
+
+    // we can only access 'a' here. 
+    console.log(a);
+}
+
+outer();
+
+/* The function will return 3, then 1 - working from the top function to the inner function.
+This is a scope nested inside another scope. 
+Code inside the innermost scope can access varibles from either scope.
+
+Code inside the inner() function has access to both variables but code in the outer only
+has access to a. 
+*/
+
+//------------------------------------------------------------------------------------------------//
+
+// Lexical scope 
+
+// Code in one scope can access variables of either that scope of any scope outside of it.
+
+const TAX_RATE = 0.08;
+
+function calculateFinalPurchase(amt){
+    amt = amt + (amt * TAX_RATE);
+
+    return amt;
+}
+
+// The TAX_RATE constant is accessibile within this function even though we didn't pass it in. 
+
+
+//------------------------------------------------------------------------------------------------//
+
