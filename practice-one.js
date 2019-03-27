@@ -28,3 +28,5 @@ while (phonePrice < bankAccount){
     console.log("The price is " + "£" + phonePrice.toFixed(2));
     phonePrice = phonePrice + phone;
 }
+
+// could make a program to work out monthly bills with input prompts 
