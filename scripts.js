@@ -300,3 +300,54 @@ for (var i = 0; i <= 9; i = i +1){
 
 //------------------------------------------------------------------------------------------------//
 
+// Functions 
+
+// Functions can help break up the code's tasks into reusable pieces
+
+function printAmount(){
+    console.log(amount.toFixed(2));
+}
+
+var amount = 99.99; 
+
+printAmount();
+amount = amount * 2;
+printAmount();
+// This function will store the number in variable "amount" and will return this value once called.
+
+// Functions can optionally take arguements (parameter) - values you pass in. 
+//They can also optionally return a value back 
+
+function printAmount(amt){
+    console.log(amt.toFixed(2));
+}
+
+function formatAmount(){
+    return "£" + amount.toFixed(2);
+}
+
+var amount = 99.99;
+
+printAmount(amount * 2);
+
+amount = formatAmount();
+console.log(amount);
+
+
+/*The function printAmount expects 1 arguement, and will return the value to 2 decimal places.
+The function formatAmount will return the amount with a pound sign before it 
+amount is defined as a variable with the value 99.99.
+*/
+
+const TAX_RATE = 0.08;
+
+function calculateFinalPurchaseAmount(amt) {
+    amt = amt + (amt * TAX_RATE);
+    return amt;
+}
+
+var amount = 99.99;
+
+amount = calculateFinalPurchaseAmount(amount);
+
+console.log(amount.toFixed(2)); 
